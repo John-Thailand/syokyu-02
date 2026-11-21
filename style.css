@@ -24,6 +24,13 @@ img {
   justify-content: space-between;
   align-items: center;
 }
+@media screen and (max-width: 700px) {
+  .header__inner {
+    height: 72px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
 .header__logo-area {
   display: flex;
   align-items: center;
@@ -33,10 +40,21 @@ img {
   height: 52px;
   width: 52px;
 }
+@media screen and (max-width: 700px) {
+  .header__logo {
+    height: 42px;
+    width: 42px;
+  }
+}
 .header__company-name {
   font-weight: 700;
   font-size: 28px;
   color: #333;
+}
+@media screen and (max-width: 700px) {
+  .header__company-name {
+    font-size: 24px;
+  }
 }
 .header__menu-area {
   display: flex;
@@ -46,6 +64,11 @@ img {
 .header__menu {
   display: flex;
   gap: 20px;
+}
+@media screen and (max-width: 700px) {
+  .header__menu {
+    display: none;
+  }
 }
 .header__menu-item {
   font-weight: 700;
@@ -70,6 +93,13 @@ img {
 .button--contact {
   background-color: #4356b7;
 }
+@media screen and (max-width: 700px) {
+  .button {
+    width: 158px;
+    height: 34px;
+    font-size: 15px;
+  }
+}
 
 /* First View */
 .fv {
@@ -91,13 +121,30 @@ img {
   text-align: center;
   margin-bottom: 40px;
 }
-.fv__desc {
+@media screen and (max-width: 700px) {
+  .fv__title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+}
+.fv__description {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.75;
   color: #333;
   text-align: center;
   margin-bottom: 40px;
+}
+@media screen and (max-width: 700px) {
+  .fv__description {
+    font-size: 13px;
+    margin-bottom: 30px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .fv {
+    height: 500px;
+  }
 }
 
 /* CoreTequが選ばれる理由 */
@@ -123,11 +170,28 @@ img {
   margin-top: 47px;
   width: 100%;
 }
+@media screen and (max-width: 1100px) {
+  .strong-points__list {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 700px) {
+  .strong-points__list {
+    margin-top: 37px;
+  }
+}
 
 .heading-title {
   font-weight: 700;
   font-size: 28px;
   color: #333;
+}
+@media screen and (max-width: 700px) {
+  .heading-title {
+    font-size: 24px;
+    line-height: 1.25;
+  }
 }
 
 .strong-point {
@@ -150,6 +214,12 @@ img {
   line-height: 1.75;
   color: #333;
 }
+@media screen and (max-width: 700px) {
+  .strong-point {
+    width: 100%;
+    max-width: 340px;
+  }
+}
 
 /* お問い合わせ */
 .contacts {
@@ -168,13 +238,29 @@ img {
   margin-top: 20px;
   margin-bottom: 55px;
 }
+@media screen and (max-width: 700px) {
+  .contacts__description {
+    line-height: 1.25;
+  }
+}
 .contacts__buttons {
   display: flex;
   gap: 32px;
 }
+@media screen and (max-width: 700px) {
+  .contacts__buttons {
+    gap: 20px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .contacts {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
 
 /* Footer */
-footer {
+.footer {
   width: 100%;
   height: 121px;
   background-color: #333;
@@ -183,87 +269,19 @@ footer {
   align-items: center;
   padding-top: 49px;
 }
-footer__nav {
+.footer__nav {
   margin-bottom: 15px;
 }
-footer__menu {
+.footer__menu {
   display: flex;
   gap: 30px;
 }
-footer__menu-item {
+.footer__menu-item {
   font-weight: 700;
   font-size: 16px;
   color: #fff;
 }
-footer__copyright {
+.footer__copyright {
   font-size: 12px;
   color: #fff;
-}
-
-/* For Tablet */
-@media screen and (max-width: 1100px) {
-  .strong-points-list {
-    flex-direction: column;
-    align-items: center;
-  }
-}
-/* For Smartphone */
-@media screen and (max-width: 700px) {
-  .header-inner {
-    height: 72px;
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-  .header-logo {
-    height: 42px;
-    width: 42px;
-  }
-  .company-name {
-    font-size: 24px;
-  }
-  .header-menu {
-    display: none;
-  }
-  .download-btn {
-    width: 158px;
-    height: 34px;
-    font-size: 15px;
-  }
-  .fv {
-    height: 500px;
-  }
-  .fv-title {
-    font-size: 24px;
-    margin-bottom: 20px;
-  }
-  .fv-desc {
-    font-size: 13px;
-    margin-bottom: 30px;
-  }
-  .heading-title {
-    font-size: 24px;
-    line-height: 1.25;
-  }
-  .strong-points-list {
-    margin-top: 37px;
-  }
-  .strong-point-item {
-    width: 100%;
-    max-width: 340px;
-  }
-  .contacts {
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-  .contacts-desc {
-    line-height: 1.25;
-  }
-  .contacts-btns {
-    gap: 20px;
-  }
-  .contacts-btn {
-    width: 158px;
-    height: 34px;
-    font-size: 15px;
-  }
 }/*# sourceMappingURL=style.css.map */
