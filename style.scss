@@ -1,0 +1,336 @@
+// ========================================
+// 変数定義
+// ========================================
+
+// カラー
+$color-primary: #006536;
+$color-secondary: #4356b7;
+$color-text: #333;
+$color-white: #fff;
+$color-background: #f1f5f2;
+$color-footer: #333;
+
+// フォント
+$font-family-base: "Lato", "Noto Sans JP", sans-serif;
+
+$font-size-xs: 12px;
+$font-size-sm: 14px;
+$font-size-md: 16px;
+$font-size-lg: 18px;
+$font-size-xl: 24px;
+$font-size-2xl: 28px;
+$font-size-3xl: 38px;
+
+$font-weight-bold: 700;
+
+// レイアウト
+$container-width: 1140px;
+$header-height: 100px;
+$header-height-mobile: 72px;
+
+$fv-height: 609px;
+$fv-height-mobile: 500px;
+
+$contact-height: 332px;
+$footer-height: 121px;
+
+// ブレークポイント
+$breakpoint-tablet: 1100px;
+$breakpoint-mobile: 700px;
+
+// ========================================
+// Mixin定義
+// ========================================
+
+// コンテナ
+@mixin container {
+  max-width: $container-width;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+// Flexbox中央配置
+@mixin flex-center($direction: row) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: center;
+  align-items: center;
+}
+
+// ボタン
+@mixin button($background-color) {
+  @include flex-center;
+  width: 186px;
+  height: 45px;
+  background-color: $background-color;
+  border-radius: 20px;
+  font-weight: $font-weight-bold;
+  font-size: $font-size-md;
+  color: $color-white;
+}
+
+html {
+    line-height: 1;
+}
+body {
+    font-family: $font-family-base;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Header */
+.header-inner {
+  @include container;
+  height: $header-height;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-logo-area {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.header-logo {
+  height: 52px;
+  width: 52px;
+}
+.company-name {
+  font-weight: $font-weight-bold;
+  font-size: $font-size-2xl;
+  color: $color-text;
+}
+.header-menu-area {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.header-menu {
+    ul {
+        display: flex;
+        gap: 20px;
+    }
+}
+.header-menu-list {
+  font-weight: $font-weight-bold;
+  font-size: $font-size-sm;
+  color: $color-text;
+}
+.download-btn {
+  width: 186px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $color-primary;
+  border-radius: 20px;
+  font-weight: $font-weight-bold;
+  font-size: $font-size-md;
+  color: $color-white;
+}
+
+/* First View */
+.fv {
+  @include flex-center(column);
+  width: 100%;
+  height: $fv-height;
+  background-image: url("img/koretequ-fv\ 1.png");
+  background-size: cover;
+  background-position: center;
+}
+.fv-title {
+  font-weight: $font-weight-bold;
+  font-size: $font-size-3xl;
+  line-height: 2.0;
+  color: $color-text;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.fv-desc {
+  font-weight: $font-weight-bold;
+  font-size: $font-size-md;
+  line-height: 1.75;
+  color: $color-text;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* CoreTequが選ばれる理由 */
+.strong-points {
+  width: 100%;
+  background-color: $color-background;
+}
+.strong-points-inner {
+  @include container;
+  padding-top: 40px;
+  padding-bottom: 58px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.heading-title {
+  font-weight: $font-weight-bold;
+  font-size: $font-size-2xl;
+  color: $color-text;
+}
+.strong-points-list {
+  display: flex;
+  gap: 40px;
+  margin-top: 47px;
+  width: 100%;
+}
+.strong-point-item {
+  width: 340px;
+  img {
+    height: 191px;
+    margin-bottom: 20px;
+  }
+}
+.strong-point-item-title {
+  text-align: center;
+  font-weight: $font-weight-bold;
+  font-size: $font-size-lg;
+  color: $color-primary;
+  margin-bottom: 20px;
+}
+.strong-point-item-desc {
+  font-weight: $font-weight-bold;
+  font-size: $font-size-sm;
+  line-height: 1.75;
+  color: $color-text;
+}
+
+/* お問い合わせ */
+.contacts {
+  @include flex-center(column);
+  width: 100%;
+  height: $contact-height;
+  background-image: url("img/coretequ-contact\ 1.png");
+}
+.contacts-desc {
+  font-weight: $font-weight-bold;
+  font-size: $font-size-md;
+  color: $color-text;
+  margin-top: 20px;
+  margin-bottom: 55px;
+}
+.contacts-btns {
+  display: flex;
+  gap: 32px;
+}
+.contacts-btn {
+  width: 186px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $color-secondary;
+  border-radius: 20px;
+  font-weight: $font-weight-bold;
+  font-size: $font-size-md;
+  color: $color-white;
+}
+
+/* Footer */
+footer {
+  width: 100%;
+  height: $footer-height;
+  background-color: $color-footer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 49px;
+}
+.footer-menu {
+  margin-bottom: 15px;
+}
+.footer-menu {
+  ul {
+    display: flex;
+    gap: 30px;
+  }
+}
+.footer-menu-list {
+  font-weight: $font-weight-bold;
+  font-size: $font-size-md;
+  color: $color-white;
+}
+.copyright {
+  font-size: $font-size-xs;
+  color: $color-white;
+}
+
+/* For Tablet */
+@media screen and (max-width: $breakpoint-tablet) {
+  .strong-points-list {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* For Smartphone */
+@media screen and (max-width: $breakpoint-mobile) {
+  .header-inner {
+    height: $header-height-mobile;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .header-logo {
+    height: 42px;
+    width: 42px;
+  }
+  .company-name {
+    font-size: $font-size-xl;
+  }
+  .header-menu {
+    display: none;
+  }
+  .download-btn {
+    width: 158px;
+    height: 34px;
+    font-size: 15px;
+  }
+
+  .fv {
+    height: $fv-height-mobile;
+  }
+  .fv-title {
+    font-size: $font-size-xl;
+    margin-bottom: 20px;
+  }
+  .fv-desc {
+    font-size: 13px;
+    margin-bottom: 30px;
+  }
+
+  .heading-title {
+    font-size: $font-size-xl;
+    line-height: 1.25;
+  }
+  .strong-points-list {
+    margin-top: 37px;
+  }
+  .strong-point-item {
+    width: 100%;
+    max-width: 340px;
+  }
+  .contacts {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .contacts-desc {
+    line-height: 1.25;
+  }
+  .contacts-btns {
+    gap: 20px;
+  }
+  .contacts-btn {
+    width: 158px;
+    height: 34px;
+    font-size: 15px;
+  }
+}

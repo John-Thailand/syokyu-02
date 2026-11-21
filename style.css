@@ -1,9 +1,12 @@
+@charset "UTF-8";
 html {
   line-height: 1;
 }
+
 body {
   font-family: "Lato", "Noto Sans JP", sans-serif;
 }
+
 img {
   max-width: 100%;
   height: auto;
@@ -12,43 +15,50 @@ img {
 /* Header */
 .header-inner {
   max-width: 1140px;
-  height: 100px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   margin-left: auto;
   margin-right: auto;
   padding-left: 20px;
   padding-right: 20px;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
+
 .header-logo-area {
   display: flex;
   align-items: center;
   gap: 10px;
 }
+
 .header-logo {
   height: 52px;
   width: 52px;
 }
+
 .company-name {
-  font-weight: bold;
+  font-weight: 700;
   font-size: 28px;
   color: #333;
 }
+
 .header-menu-area {
   display: flex;
   align-items: center;
   gap: 20px;
 }
+
 .header-menu ul {
   display: flex;
   gap: 20px;
 }
+
 .header-menu-list {
-  font-weight: bold;
+  font-weight: 700;
   font-size: 14px;
   color: #333;
 }
+
 .download-btn {
   width: 186px;
   height: 45px;
@@ -57,33 +67,35 @@ img {
   align-items: center;
   background-color: #006536;
   border-radius: 20px;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 16px;
   color: #fff;
 }
 
 /* First View */
 .fv {
-  width: 100%;
-  height: 609px;
-  background-image: url("img/koretequ-fv\ 1.png");
-  background-size: cover;
-  background-position: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  height: 609px;
+  background-image: url("img/koretequ-fv 1.png");
+  background-size: cover;
+  background-position: center;
 }
+
 .fv-title {
-  font-weight: bold;
+  font-weight: 700;
   font-size: 38px;
-  line-height: 2.0;
+  line-height: 2;
   color: #333;
   text-align: center;
   margin-bottom: 40px;
 }
+
 .fv-desc {
-  font-weight: bold;
+  font-weight: 700;
   font-size: 16px;
   line-height: 1.75;
   color: #333;
@@ -94,31 +106,35 @@ img {
 /* CoreTequが選ばれる理由 */
 .strong-points {
   width: 100%;
-  background-color: #F1F5F2;
+  background-color: #f1f5f2;
 }
+
 .strong-points-inner {
   max-width: 1140px;
-  padding-top: 40px;
-  padding-bottom: 58px;
-  padding-right: 20px;
-  padding-left: 20px;
   margin-left: auto;
   margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 40px;
+  padding-bottom: 58px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
 .heading-title {
-  font-weight: bold;
+  font-weight: 700;
   font-size: 28px;
   color: #333;
 }
+
 .strong-points-list {
   display: flex;
   gap: 40px;
   margin-top: 47px;
   width: 100%;
 }
+
 .strong-point-item {
   width: 340px;
 }
@@ -126,15 +142,17 @@ img {
   height: 191px;
   margin-bottom: 20px;
 }
+
 .strong-point-item-title {
   text-align: center;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 18px;
   color: #006536;
   margin-bottom: 20px;
 }
+
 .strong-point-item-desc {
-  font-weight: bold;
+  font-weight: 700;
   font-size: 14px;
   line-height: 1.75;
   color: #333;
@@ -142,34 +160,37 @@ img {
 
 /* お問い合わせ */
 .contacts {
-  width: 100%;
-  height: 332px;
-  background-image: url("img/coretequ-contact\ 1.png");
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  height: 332px;
+  background-image: url("img/coretequ-contact 1.png");
 }
+
 .contacts-desc {
-  font-weight: bold;
+  font-weight: 700;
   font-size: 16px;
   color: #333;
   margin-top: 20px;
   margin-bottom: 55px;
 }
+
 .contacts-btns {
   display: flex;
   gap: 32px;
 }
+
 .contacts-btn {
   width: 186px;
   height: 45px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #4356B7;
+  background-color: #4356b7;
   border-radius: 20px;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 16px;
   color: #fff;
 }
@@ -184,18 +205,22 @@ footer {
   align-items: center;
   padding-top: 49px;
 }
+
 .footer-menu {
   margin-bottom: 15px;
 }
+
 .footer-menu ul {
   display: flex;
   gap: 30px;
 }
+
 .footer-menu-list {
-  font-weight: bold;
+  font-weight: 700;
   font-size: 16px;
   color: #fff;
 }
+
 .copyright {
   font-size: 12px;
   color: #fff;
@@ -208,7 +233,6 @@ footer {
     align-items: center;
   }
 }
-
 /* For Smartphone */
 @media screen and (max-width: 700px) {
   .header-inner {
@@ -231,7 +255,6 @@ footer {
     height: 34px;
     font-size: 15px;
   }
-
   .fv {
     height: 500px;
   }
@@ -243,7 +266,6 @@ footer {
     font-size: 13px;
     margin-bottom: 30px;
   }
-
   .heading-title {
     font-size: 24px;
     line-height: 1.25;
@@ -270,4 +292,4 @@ footer {
     height: 34px;
     font-size: 15px;
   }
-}
+}/*# sourceMappingURL=style.css.map */
