@@ -13,7 +13,7 @@ img {
 }
 
 /* Header */
-.header-inner {
+.header__inner {
   max-width: 1140px;
   margin-left: auto;
   margin-right: auto;
@@ -24,52 +24,51 @@ img {
   justify-content: space-between;
   align-items: center;
 }
-
-.header-logo-area {
+.header__logo-area {
   display: flex;
   align-items: center;
   gap: 10px;
 }
-
-.header-logo {
+.header__logo {
   height: 52px;
   width: 52px;
 }
-
-.company-name {
+.header__company-name {
   font-weight: 700;
   font-size: 28px;
   color: #333;
 }
-
-.header-menu-area {
+.header__menu-area {
   display: flex;
   align-items: center;
   gap: 20px;
 }
-
-.header-menu ul {
+.header__menu {
   display: flex;
   gap: 20px;
 }
-
-.header-menu-list {
+.header__menu-item {
   font-weight: 700;
   font-size: 14px;
   color: #333;
 }
 
-.download-btn {
+.button {
   width: 186px;
   height: 45px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #006536;
   border-radius: 20px;
   font-weight: 700;
   font-size: 16px;
   color: #fff;
+}
+.button--download {
+  background-color: #006536;
+}
+.button--contact {
+  background-color: #4356b7;
 }
 
 /* First View */
@@ -84,8 +83,7 @@ img {
   background-size: cover;
   background-position: center;
 }
-
-.fv-title {
+.fv__title {
   font-weight: 700;
   font-size: 38px;
   line-height: 2;
@@ -93,8 +91,7 @@ img {
   text-align: center;
   margin-bottom: 40px;
 }
-
-.fv-desc {
+.fv__desc {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.75;
@@ -108,8 +105,7 @@ img {
   width: 100%;
   background-color: #f1f5f2;
 }
-
-.strong-points-inner {
+.strong-points__inner {
   max-width: 1140px;
   margin-left: auto;
   margin-right: auto;
@@ -121,6 +117,12 @@ img {
   flex-direction: column;
   align-items: center;
 }
+.strong-points__list {
+  display: flex;
+  gap: 40px;
+  margin-top: 47px;
+  width: 100%;
+}
 
 .heading-title {
   font-weight: 700;
@@ -128,30 +130,21 @@ img {
   color: #333;
 }
 
-.strong-points-list {
-  display: flex;
-  gap: 40px;
-  margin-top: 47px;
-  width: 100%;
-}
-
-.strong-point-item {
+.strong-point {
   width: 340px;
 }
-.strong-point-item img {
+.strong-point__image {
   height: 191px;
   margin-bottom: 20px;
 }
-
-.strong-point-item-title {
+.strong-point__title {
   text-align: center;
   font-weight: 700;
   font-size: 18px;
   color: #006536;
   margin-bottom: 20px;
 }
-
-.strong-point-item-desc {
+.strong-point__description {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.75;
@@ -168,31 +161,16 @@ img {
   height: 332px;
   background-image: url("img/coretequ-contact 1.png");
 }
-
-.contacts-desc {
+.contacts__description {
   font-weight: 700;
   font-size: 16px;
   color: #333;
   margin-top: 20px;
   margin-bottom: 55px;
 }
-
-.contacts-btns {
+.contacts__buttons {
   display: flex;
   gap: 32px;
-}
-
-.contacts-btn {
-  width: 186px;
-  height: 45px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #4356b7;
-  border-radius: 20px;
-  font-weight: 700;
-  font-size: 16px;
-  color: #fff;
 }
 
 /* Footer */
@@ -205,23 +183,19 @@ footer {
   align-items: center;
   padding-top: 49px;
 }
-
-.footer-menu {
+footer__nav {
   margin-bottom: 15px;
 }
-
-.footer-menu ul {
+footer__menu {
   display: flex;
   gap: 30px;
 }
-
-.footer-menu-list {
+footer__menu-item {
   font-weight: 700;
   font-size: 16px;
   color: #fff;
 }
-
-.copyright {
+footer__copyright {
   font-size: 12px;
   color: #fff;
 }
